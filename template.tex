@@ -1,9 +1,33 @@
-\documentclass{article}
+\documentclass[a4paper,12pt,times,numbered,print,index]{article}
 
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{listings}
-\usepackage{fullpage}
 \usepackage{color}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+%
+% Impostazioni per head e foot
+%
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{<++>}
+\fancyfoot[R]{\thepage}
+
+%
+% Impostazioni per link dell'indice
+%
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 % Colori per inserire syntax highlight
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -28,23 +52,41 @@
   breakatwhitespace=true,
   tabsize=3
 }
-%
-% Settings per il TITOLO
-%
 \author{Guglielmo Bartelloni}
-\title{Titolo}
-
 %
 % Inizio del documento
 %
 \begin{document}
-\maketitle
+%
+% TITOLO
+%
+\begin{titlepage}
+\begin{center}
+	\vspace{1cm}
+	\textbf{\huge{<++>}}\\ 
+	\vspace{1cm}
+	\includegraphics[scale=0.7]{logoITTS.jpg}\\
+	\vspace{1cm}
+	\large{Guglielmo Bartelloni}\\
+	\vspace{0.5cm}
+	24 Dicembre, 2017\\
+	\today\\
+	\vspace{0.5cm}
+	\vspace{0.5cm}
+	4IB\\
+	Luigi Vestri e Davide Caramelli\\
+	\vspace{1cm}
+	\Large{Laboratorio di Informatica}
+\end{center}
+\end{titlepage}
+\vspace*{1cm}
 \tableofcontents
 \clearpage
 %
 % Inizio del CORPO
 %
 \section{Scopo dell'esercitazione}
+
 %
 % Per inserimento del programma Java
 %
@@ -70,8 +112,8 @@
 \subsection{UML}
 
 \subsection{Descrizione Classi}
-\subsubsection{Classe1}
-\subsubsection{Classe2}
+\subsubsection{<++>} %Nome della classe 
+\subsubsection{<++>} %Nome della classe
 
 
 \section{Test Data Set/Debug}
