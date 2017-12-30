@@ -1,4 +1,7 @@
 # LatexTemplate
-My personal LaTeX templates
+Template per latex completo di bibliografia e formattazione per consegne di informatica.
 
-Template created for Programming assignement
+Cosa occorre avere:
+*Biber
+*LaTeX
+
