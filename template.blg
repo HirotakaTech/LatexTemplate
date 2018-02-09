@@ -1,9 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.10
 [0] Config.pm:305> INFO - Logfile is 'template.blg'
-[44] biber:313> INFO - === ven feb  9, 2018, 19:12:01
-[135] Biber.pm:371> INFO - Reading 'template.bcf'
-[178] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
-[183] Utils.pm:193> WARN - The file 'template.bcf' does not contain any citations!
-[188] bbl.pm:617> INFO - Writing 'template.bbl' with encoding 'UTF-8'
-[188] bbl.pm:720> INFO - Output to template.bbl
-[188] Biber.pm:110> INFO - WARNINGS: 1
+[16] biber:313> INFO - === ven feb  9, 2018, 19:24:48
+[30] Biber.pm:371> INFO - Reading 'template.bcf'
+[71] Biber.pm:857> INFO - Found 2 citekeys in bib section 0
+[80] Biber.pm:3976> INFO - Processing section 0
+[86] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[87] bibtex.pm:1490> INFO - LaTeX decoding ...
+[90] bibtex.pm:1306> INFO - Found BibTeX data source 'bibliografia.bib'
+[104] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[104] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[104] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'it-IT'
+[104] Biber.pm:3810> INFO - No sort tailoring available for locale 'it-IT'
+[106] bbl.pm:617> INFO - Writing 'template.bbl' with encoding 'UTF-8'
+[107] bbl.pm:720> INFO - Output to template.bbl

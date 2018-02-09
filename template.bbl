@@ -16,5 +16,66 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{corsoinformatica}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2c210402f5295c8bce6568a5a2da33a1}{%
+           family={Fiorenzo},
+           familyi={F\bibinitperiod},
+           given={Formichi},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8ecb50d8a5168d35ca6b4496b189ca83}{%
+           family={Giorgio},
+           familyi={G\bibinitperiod},
+           given={Meini},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e7335344afcc228c71fa67781cf06e4d}{%
+           family={Ivan},
+           familyi={I\bibinitperiod},
+           given={Venuti},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Zanichelli}%
+      }
+      \strng{namehash}{90cbbe169a5738d1877dc33ce3ffebcf}
+      \strng{fullhash}{90cbbe169a5738d1877dc33ce3ffebcf}
+      \strng{bibnamehash}{90cbbe169a5738d1877dc33ce3ffebcf}
+      \strng{authorbibnamehash}{90cbbe169a5738d1877dc33ce3ffebcf}
+      \strng{authornamehash}{90cbbe169a5738d1877dc33ce3ffebcf}
+      \strng{authorfullhash}{90cbbe169a5738d1877dc33ce3ffebcf}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Corso di Informatica}
+      \field{year}{2017}
+    \endentry
+    \entry{polimorfismo}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://it.wikipedia.org/wiki/Polimorfismo_(informatica)}}
+      \field{title}{Polimorfismo}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
