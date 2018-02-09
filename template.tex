@@ -20,9 +20,9 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[R]{<++>}
+\fancyhead[R]{Designer}
 \fancyfoot[L]{\thepage}
-\fancyfoot[R]{\slshape{\footnotesize{Guglielmo Bartelloni}}}
+\fancyfoot[R]{\slshape{\footnotesize{Guglielmo Bartelloni - Francesco Bellezza}}}
 
 %
 % Impostazioni per link dell'indice
@@ -69,11 +69,11 @@
 \begin{titlepage}
 \begin{center}
 	\vspace{1cm}
-	\textbf{\huge{<++>}}\\ 
+	\textbf{\huge{Designer}}\\ 
 	\vspace{1cm}
 	\includegraphics[scale=0.7]{logoITTS.jpg}\\
 	\vspace{1cm}
-	\large{Guglielmo Bartelloni}\\
+	\large{Guglielmo Bartelloni, Francesco Bellezza}\\
 	\vspace{0.5cm}
 	24 Dicembre, 2017\\
 	\today\\
@@ -92,20 +92,53 @@
 % Inizio del CORPO
 %
 \section{Scopo dell'esercitazione}
-La programmazione orientata agli oggetti e' un tipo di programmazione particolare perche' permette di rappresentare oggetti reali all'interno di un programma
+Lo scopo dell'esercitazione e quella di realizzare un programma che consenta di disegnare figure geometriche e grafici di funzioni permettendo di salvare i `Disegni' su file di testo.
 
-\textcite{oggetti}
-ciao
 
 %
 % Per inserimento del programma Java
 %
 \begin{lstlisting}
+public class MainFrame{
+	ciao
+	}
 \end{lstlisting}
 
 \section{Cenni Storici}
 
-\subsection{Argomento}
+
+\subsection{Ereditarieta'}
+L’ereditarietà è una relazione di tipo is-A, dove una superclasse mette a disposizione di una sottoclasse i suoi metodi e attributi non privati (a eccezione del costruttore).
+
+In Java, per estendere una superclasse e per creare quindi la sottoclasse, si utilizza la parole chiave extends accanto al nome della sottoclasse e accanto alla parola extends si inserisce il nome della superclasse.
+
+Nel caso delle interfacce, ovvero particolari classi che al loro interno contengono solamente metodi astratti, si utilizza la parola chiave implements.
+
+\subsection{Polimorfismo}
+Il polimorfismo è una tecnica che consente di utilizzare metodi polimorfici, ovvero metodi che hanno lo stesso nome, ma implementazioni diverse.
+Esistono due tipi di polimorfismi principali: per overloading e per overriding.
+
+Nel polimorfismo per overloading si opera a un livello locale, ovvero all’interno di una classe.
+
+Il metodo polimorfico in questo caso deve:
+\begin{itemize}
+	\item Avere lo stesso nome degli altri metodi polimorfici.
+	\item Avere numero di parametri diversi o avere tipi di parametri diversi o avere ordine di parametri diversi rispetto agli altri metodi polimorfici.
+	\item Può avere un tipo di ritorno diverso se i due punti qua sopra sono rispettati.
+\end{itemize}
+Nel polimorfismo per overriding si opera a un livello di superclassi e sottoclassi.
+
+Nelle sottoclassi viene ridefinito il metodo presente nelle superclassi.
+
+Il metodo polimorfico in questo caso deve:
+\begin{itemize}
+	\item Avere la stessa signature del metodo della superclasse.
+	\item Avere lo stesso tipo di ritorno della superclasse o un sottotipo del tipo di ritorno della superclasse (stesso discorso vale per i parametri).
+	\item I metodi private non vengono ereditati alla classe figlia, quindi non si può effettuare l’overriding del metodo.
+	\item Le clausole come native, strictfp possono essere incluse nel metodo della classe figlia.
+	\item Un metodo statico può essere solo adombrato e non sovrascritto.
+\end{itemize}
+
 
 
 \section{Analisi Funzionale}
@@ -122,8 +155,8 @@ ciao
 \subsection{UML}
 
 \subsection{Descrizione Classi}
-\subsubsection{<++>} %Nome della classe 
-\subsubsection{<++>} %Nome della classe
+\subsubsection{MainFrame} %Nome della classe 
+\subsubsection{DrawSomething} %Nome della classe
 
 
 \section{Test Data Set/Debug}
