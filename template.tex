@@ -92,9 +92,7 @@
 % Inizio del CORPO
 %
 \section{Scopo dell'esercitazione}
-Lo scopo dell'esercitazione e quella di realizzare un programma che consenta di disegnare figure geometriche e grafici di funzioni permettendo di salvare i `Disegni' su file di testo.
-
-
+Lo scopo dell'esercitazione e quella di realizzare un programma che consenta di disegnare figure geometriche e grafici di funzioni permettendo di salvare le figure sul un file di testo.
 
 \section{Cenni Storici}
 
@@ -139,7 +137,7 @@ Il metodo polimorfico in questo caso deve:
 
 \subsection{Ipotesi Risolutiva}
 
-\subsection{Funzionalita' del programma}
+\subsection{Funzionalitá del programma}
 
 
 \section{Analisi Tecnica}
@@ -149,6 +147,7 @@ Il metodo polimorfico in questo caso deve:
 \subsection{UML}
 \begin{center}
 	\includegraphics[scale=0.4]{Immagini/UML.pdf}
+	\label{UML}
 \end{center}
 
 
@@ -156,7 +155,7 @@ Il metodo polimorfico in questo caso deve:
 \subsubsection{MainFrame} %Nome della classe 
 \subsubsection{DrawSomething} %Nome della classe
 La classe \textit{DrawSomething} é una classe astratta che dichiara alcuni metodi per impostare i colori e un metodo astratto per essere riscritto nelle classi figlie.
-É pensata all'unico scopo di essere estesa dalle altre classi \textit{draw} che implementeranno il metodo \textit{toString()} e il metodo \textit{draw(Graphics g)}.
+É pensata all'unico scopo di essere estesa dalle altre classi \textit{draw} che implementeranno il metodo \textit{toString()} e il metodo \textit{draw(Graphics g)} come mostrato in figura \ref{UML}.
 Gli attributi di questa classe sono i seguenti:
 \begin{lstlisting}
 protected Color colBground;
