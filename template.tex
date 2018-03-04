@@ -150,13 +150,23 @@ Le funzionalitá che si devono implementare sono:
 	\item Disegnare Font(grandezza, tipo,  stile)
 \end{enumerate}
 
+
 L`interfaccia si presenta in questo modo:
 
 
 \section{Analisi Tecnica}
 
 \subsection{Scomposizione Top-Down}
-
+La scomposizione Top-Down del Main é la seguente:
+\begin{lstlisting}
+	INIZIO
+	imposta le dimensioni del frame
+	inizializza le icone
+	crea i componenti della GUI
+	aggiungi i listener
+	imposta la finestra non ridimensionabile
+	FINE
+\end{lstlisting}
 \subsection{UML}
 \begin{center}
 	\includegraphics[scale=0.4]{Immagini/UML.pdf}
@@ -165,7 +175,17 @@ L`interfaccia si presenta in questo modo:
 
 
 \subsection{Descrizione Classi}
-\subsubsection{MainFrame} %Nome della classe 
+Le classi del programma Designer sono divise per package a seconda del loro utilizzo all'interno del programma stesso, essi sono:
+\begin{itemize}
+	\item \textit{File}: contiene le classi che si occupano della gestione dei file.
+	\item \textit{GUI}: contiene le classi che si occupano della gestione della grafica insieme alle classi che rappresentano le varie Dialog e la tabella.
+	\item \textit{Grafico}: contiene la classe Funzione che rappresenta una funzione matematica.
+	\item \textit{UtilitiesForDrawing}: contiene le classi che si occupano del disegno delle figure geometriche compreso anche il grafico della funzione e il font.
+	\item \textit{VectorAndException}: contiene la classe che rappresenta il vettore di figure insieme alle eccezioni ad esso collegate.
+	\item \textit{icons}: contiene tutte le immagini delle icone utilizzate.
+	\item \textit{lookAndFeel}: contiene i .jar del Look And Feel utilizzato.
+\end{itemize}
+
 \subsubsection{DrawSomething} %Nome della classe
 La classe \textit{DrawSomething} é una classe astratta che dichiara alcuni metodi per impostare i colori e un metodo astratto per essere riscritto nelle classi figlie.
 É pensata all'unico scopo di essere estesa dalle altre classi \textit{draw} che implementeranno il metodo \textit{toString()} e il metodo \textit{draw(Graphics g)} come mostrato in figura \ref{UML}.
@@ -176,6 +196,7 @@ protected Color colFground;
 protected boolean isFill;
 protected boolean isDraw;
 \end{lstlisting}
+
 \subsubsection{FileFigure}
 La classe \textit{FileFigure} é la classe che si occupa di gestire di gestire il ripristino e il salvataggio delle figure nel file di testo.
 
@@ -183,6 +204,48 @@ Il metodo \textit{readFile()} si occupa di leggere il file di testo e salvare le
 
 Il metodo \textit{saveFile()} si occupa di salvare l'array di figure all'interno del file di testo. Per il salvataggio delle figure viene utilizzato il metodo \textit{toString()} di ogni figura.
 
+\subsection{Funzione}
+La classe \textit{Funzione} é una classe che rappresenta una funzione matematica contiene infatti l'insieme di coefficienti insieme al termine noto all'interno di un'array di \textit{double}.
+Gli attributi di questa classe sono i seguenti:
+\begin{lstlisting}
+	private double[] coefficienti
+\end{lstlisting}
+Contiene un metodo per ottenere la \textit{y} data una \textit{x} come parametro:
+\begin{lstlisting}
+public double getRisultato(double x);
+\end{lstlisting}
+e un metodo per aggiungere i coefficienti:
+\begin{lstlisting}
+ public boolean add(double coefficiente, int potenzaCoef);
+\end{lstlisting}
+
+\subsection{Vector}
+La classe \textit{Vector} é la classe che rappresenta un vettore di dimensione iniziale di 100 Object. Contiene i metodi per rendere dinamico il vettore, infatti ogni volta che verrá aggiunto un elemento ci sará un controllo che verificherá che il numero di elementi non superi la grandezza del vettore, se viene superata allora verrá lanciata l'eccezione \textit{IsFullException} che deve essere catturata per poter richiamare il metodo \textit{riorganizza()}. Il metodo \textit{riorganizza()} si occupa di ricreare l'array con dimensione doppia rispetto a quella iniziale e di immettere gli elementi al suo interno.
+É presente anche un metodo per rimuovere gli elementi data una posizione facendo uno shift verso sinistra:
+\begin{lstlisting}
+	public void removeElement(int pos);
+\end{lstlisting}
+I parametri della classe sono:
+\begin{lstlisting}
+protected Object[] items;
+protected int index;
+public static int DIMENSIONE;
+\end{lstlisting}
+
+\subsection{VectorDraw}
+Classe che estende la classe \textit{Vector} in modo da contenere elementi di tipo \textit{DrawSomething}.
+Contiene due metodi che servono uno, per ritornare l'array di DrawSomething, l'altro, per ritornare la singola figure presente nella posizione data come parametro.
+\subsection{JButtonColor}
+
+\subsection{JColorChoicePane}
+
+\subsection{JPanelDrawing}
+
+\subsection{TableModel}
+
+\subsection{JDialogArc}
+
+\subsection{JDialogGrafico}
 
 \section{Test Data Set/Debug}
 
