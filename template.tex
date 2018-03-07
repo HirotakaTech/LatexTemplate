@@ -160,11 +160,11 @@ L`interfaccia si presenta in questo modo:
 La scomposizione Top-Down del Main é la seguente:
 \begin{lstlisting}
 	INIZIO
-	imposta le dimensioni del frame
-	inizializza le icone
-	crea i componenti della GUI
-	aggiungi i listener
-	imposta la finestra non ridimensionabile
+		imposta le dimensioni del frame
+		inizializza le icone
+		crea i componenti della GUI
+		aggiungi i listener
+		imposta la finestra non ridimensionabile
 	FINE
 \end{lstlisting}
 \subsection{UML}
@@ -186,15 +186,15 @@ Le classi del programma Designer sono divise per package a seconda del loro util
 	\item \textit{lookAndFeel}: contiene i .jar del Look And Feel utilizzato.
 \end{itemize}
 
-\subsubsection{DrawSomething} %Nome della classe
+\subsubsection{MainFrame} %Nome della classe
+La classe \textit{MainFrame} è la classe che si occupa di gestire tutti gli oggetti del programma, infatti rappresenta il \textit{controller} e la \textit{vista} del Design Pattern MVC. 
+\subsubsection{DrawSomething}
 La classe \textit{DrawSomething} é una classe astratta che dichiara alcuni metodi per impostare i colori e un metodo astratto per essere riscritto nelle classi figlie.
 É pensata all'unico scopo di essere estesa dalle altre classi \textit{draw} che implementeranno il metodo \textit{toString()} e il metodo \textit{draw(Graphics g)} come mostrato in figura \ref{UML}.
 Gli attributi di questa classe sono i seguenti:
 \begin{lstlisting}
 protected Color colBground;
 protected Color colFground;
-protected boolean isFill;
-protected boolean isDraw;
 \end{lstlisting}
 
 \subsubsection{FileFigure}
@@ -204,7 +204,7 @@ Il metodo \textit{readFile()} si occupa di leggere il file di testo e salvare le
 
 Il metodo \textit{saveFile()} si occupa di salvare l'array di figure all'interno del file di testo. Per il salvataggio delle figure viene utilizzato il metodo \textit{toString()} di ogni figura.
 
-\subsection{Funzione}
+\subsubsection{Funzione}
 La classe \textit{Funzione} é una classe che rappresenta una funzione matematica contiene infatti l'insieme di coefficienti insieme al termine noto all'interno di un'array di \textit{double}.
 Gli attributi di questa classe sono i seguenti:
 \begin{lstlisting}
@@ -219,7 +219,7 @@ e un metodo per aggiungere i coefficienti:
  public boolean add(double coefficiente, int potenzaCoef);
 \end{lstlisting}
 
-\subsection{Vector}
+\subsubsection{Vector}
 La classe \textit{Vector} é la classe che rappresenta un vettore di dimensione iniziale di 100 Object. Contiene i metodi per rendere dinamico il vettore, infatti ogni volta che verrá aggiunto un elemento ci sará un controllo che verificherá che il numero di elementi non superi la grandezza del vettore, se viene superata allora verrá lanciata l'eccezione \textit{IsFullException} che deve essere catturata per poter richiamare il metodo \textit{riorganizza()}. Il metodo \textit{riorganizza()} si occupa di ricreare l'array con dimensione doppia rispetto a quella iniziale e di immettere gli elementi al suo interno.
 É presente anche un metodo per rimuovere gli elementi data una posizione facendo uno shift verso sinistra:
 \begin{lstlisting}
@@ -232,20 +232,26 @@ protected int index;
 public static int DIMENSIONE;
 \end{lstlisting}
 
-\subsection{VectorDraw}
+\subsubsection{VectorDraw}
 Classe che estende la classe \textit{Vector} in modo da contenere elementi di tipo \textit{DrawSomething}.
 Contiene due metodi che servono uno, per ritornare l'array di DrawSomething, l'altro, per ritornare la singola figure presente nella posizione data come parametro.
-\subsection{JButtonColor}
+\subsubsection{JButtonColor}
 
-\subsection{JColorChoicePane}
+\subsubsection{JColorChoicePane}
+Pannello che ha la funzione di visualizzare la scelta dei colori contiene un \textit{ItemListener} per salvare il colore una volto che viene scelto.
+\subsubsection{JPanelDrawing}
+Rappresenta il pannello per il disegno, ovvero il foglio bianco su cui disegnare le figure.
+\subsubsection{TableModel}
 
-\subsection{JPanelDrawing}
-
-\subsection{TableModel}
-
-\subsection{JDialogArc}
-
-\subsection{JDialogGrafico}
+\subsubsection{JDialogArc}
+Rappresenta una \textit{Dialog} che si occupa di [rendere i dati necessari per costruire l'arco 
+\subsubsection{JDialogGrafico}
+Rappresenta una \textit{Dialog} che si occupa di prendere i dati necessari per la creazione del grafico. Permette di inserire i dati con un formato a matematico uno alla volta del tipo:\\
+$2x^2$\\
+in questo
+\begin{lstlisting}
+2x2
+\end{lstlisting}
 
 \section{Test Data Set/Debug}
 
