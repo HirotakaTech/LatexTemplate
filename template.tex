@@ -156,7 +156,7 @@ L`interfaccia si presenta in questo modo:
 
 \section{Analisi Tecnica}
 
-\subsection{Scomposizione Top-Down}
+\subsection{Scomposizione Top-Down} \label{TopDown}
 La scomposizione Top-Down del Main é la seguente:
 \begin{lstlisting}
 	INIZIO
@@ -187,7 +187,19 @@ Le classi del programma Designer sono divise per package a seconda del loro util
 \end{itemize}
 
 \subsubsection{MainFrame} %Nome della classe
-La classe \textit{MainFrame} è la classe che si occupa di gestire tutti gli oggetti del programma, infatti rappresenta il \textit{controller} e la \textit{vista} del Design Pattern MVC. 
+La classe \textit{MainFrame} è la classe che si occupa di gestire tutti gli oggetti del programma, infatti rappresenta il \textit{controller} e la \textit{vista} del Design Pattern MVC. Le sue funzioni principali sono state esplicitate in \ref{TopDown}. La classe è stata scomposta in molti sottometodi per facilitare la lettura e la scrittura. Viene implementato il MouseListener registrato sul \textit{pnlDisegno} e nel momento in cui l'utente preme sul pannello viene registrata la posizione (iniziale) del mouse poi, al rilascio, viene registrata la posizione (finale) del mouse inizializzando e inserendo nel vettoreFigure la figure precedentemente selezionata dall'utente.
+
+\textit{setSelectedBotton()} è un particolare metodo per riuscire a lasciare selezionati i pulsanti delle figure e dello stile dei font, semplicemente deseleziona tutti i pulsanti che non corrispondono a quello premuto.
+
+Al rilascio del pulsante del mouse vengono fatti vari controlli delle coordinate per farsì che la figura sia disegnata correttamente: se per esempio l'utente trascina da in alto a sinistra fino in basso a sinistra dovranno essere scambiate le coordinate come segue
+\begin{lstlisting}
+  pInf.setLocation(pIniziale.x, pFinale.y);
+  pSup.setLocation(pFinale.x, pIniziale.y);
+  pIniziale.setLocation(pSup);
+  pFinale.setLocation(pInf);
+\end{lstlisting}
+Al suo interno è presente una inner class, che ha come scopo quello di gestire il \textit{JMenuBar}, che ha il compito di gestire la creazione di un file, il caricamento e il salvataggio.
+
 \subsubsection{DrawSomething}
 La classe \textit{DrawSomething} é una classe astratta che dichiara alcuni metodi per impostare i colori e un metodo astratto per essere riscritto nelle classi figlie.
 É pensata all'unico scopo di essere estesa dalle altre classi \textit{draw} che implementeranno il metodo \textit{toString()} e il metodo \textit{draw(Graphics g)} come mostrato in figura \ref{UML}.
@@ -199,6 +211,20 @@ protected Color colFground;
 
 \subsubsection{FileFigure}
 La classe \textit{FileFigure} é la classe che si occupa di gestire di gestire il ripristino e il salvataggio delle figure nel file di testo.
+Un file di testo, per essere letto, deve avere al suo interno:
+\begin{enumerate}
+\item Descrizione
+\item Data Creazione
+\item Data Ultima Modifica
+\item Colore sfondo
+\item Figure da disegnare
+\end{enumerate}
+Al suo interno sono presenti i seguenti metodi:
+
+Il metodo \textit{setWrittable()} serve per creare una istanza della classe PrintWriter che scrive sul file. Se la funzione ritorna un valore uguale a \textcolor{blue}{false}, allora c'è stato un qualche errore dovuto all'Input/Output.
+
+Il metodo \textit{setReadable()} serve per creare una istanza della classe BufferedReader che legge il file. Se la funzione ritorna un valore uguale a \textcolor{blue}{false}, allora c'è stato un qualche errore dovuto all'Input/Output: ad esempio il file non è stato trovato.
+
 
 Il metodo \textit{readFile()} si occupa di leggere il file di testo e salvare le figure nell'array.
 
