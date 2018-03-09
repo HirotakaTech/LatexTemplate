@@ -185,7 +185,7 @@ Le classi del programma Designer sono divise per package a seconda del loro util
 	\item \textit{icons}: contiene tutte le immagini delle icone utilizzate.
 	\item \textit{lookAndFeel}: contiene i .jar del Look And Feel utilizzato.
 \end{itemize}
-
+Di seguito verranno descritte solo le classi principali.
 \subsubsection{MainFrame} %Nome della classe
 La classe \textit{MainFrame} è la classe che si occupa di gestire tutti gli oggetti del programma, infatti rappresenta il \textit{controller} e la \textit{vista} del Design Pattern MVC. Le sue funzioni principali sono state esplicitate in \ref{TopDown}. La classe è stata scomposta in molti sottometodi per facilitare la lettura e la scrittura. Viene implementato il MouseListener registrato sul \textit{pnlDisegno} e nel momento in cui l'utente preme sul pannello viene registrata la posizione (iniziale) del mouse poi, al rilascio, viene registrata la posizione (finale) del mouse inizializzando e inserendo nel vettoreFigure la figure precedentemente selezionata dall'utente.
 
@@ -198,7 +198,7 @@ Al rilascio del pulsante del mouse vengono fatti vari controlli delle coordinate
   pIniziale.setLocation(pSup);
   pFinale.setLocation(pInf);
 \end{lstlisting}
-Al suo interno è presente una inner class, che ha come scopo quello di gestire il \textit{JMenuBar}, che ha il compito di gestire la creazione di un file, il caricamento e il salvataggio.
+Al suo interno è presente una inner class, che ha come scopo quello di gestire il \textit{JMenuBar} e di gestire la creazione di un file, il caricamento e il salvataggio.
 
 \subsubsection{DrawSomething}
 La classe \textit{DrawSomething} é una classe astratta che dichiara alcuni metodi per impostare i colori e un metodo astratto per essere riscritto nelle classi figlie.
@@ -261,14 +261,12 @@ public static int DIMENSIONE;
 \subsubsection{VectorDraw}
 Classe che estende la classe \textit{Vector} in modo da contenere elementi di tipo \textit{DrawSomething}.
 Contiene due metodi che servono uno, per ritornare l'array di DrawSomething, l'altro, per ritornare la singola figure presente nella posizione data come parametro.
-\subsubsection{JButtonColor}
-
 \subsubsection{JColorChoicePane}
 Pannello che ha la funzione di visualizzare la scelta dei colori contiene un \textit{ItemListener} per salvare il colore una volto che viene scelto.
+\subsubsection{JButtonColor}
+La classe \textit{JButtonColor} é stata creata appositamente perché il programma utilizza un Look and Feel diverso da quello di default. Il problema che abbiamo riscontrato con questo, é che i componenti non possono essere cambiati di colore al di fuori del \textit{paintComponent(Graphics g)}. Abbiamo dovuto quindi, per la scelta del colore, creare dei bottoni che disegnino un rettangolo al loro interno con il colore selezionato dall'utente nel \textit{JColorChoicePane}.
 \subsubsection{JPanelDrawing}
-Rappresenta il pannello per il disegno, ovvero il foglio bianco su cui disegnare le figure.
-\subsubsection{TableModel}
-
+Rappresenta il pannello per il disegno, ovvero il foglio bianco su cui disegnare le figure. Presenta il metodo \textit{paintComponent(Graphics g)} che disegna tutte le figure del vettore attraverso un \textit{for} e richiamando il metodo \textit{draw(Graphics g)} di ogni figura.
 \subsubsection{JDialogArc}
 Rappresenta una \textit{Dialog} che si occupa di [rendere i dati necessari per costruire l'arco 
 \subsubsection{JDialogGrafico}
