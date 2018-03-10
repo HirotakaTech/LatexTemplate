@@ -147,13 +147,40 @@ La Swing é un'estensione dell'AWT con componenti scritti interamente in Java, i
 Per il disegno di figure geometriche in Java inizialmente veniva utilizzata la classe Canvas, questa peró é stata dichiarata deprecata. Adesso, anche con l'avvento del framework Swing, viene utilizzato un metodo chiamato \textit{paintComponent(Graphics g)} a cui viene fatto l'overriding nella classe in cui si vuole disegnare, questo metodo é comune a tutti i JComponent. Per il disegno vero e proprio, il componente \textit{Graphics g} contiene dei metodi appositi come il \textit{DrawLine(...)} per disegnare una linea. 
 
 \section{Analisi Funzionale}
-
-
 \subsection{Ipotesi Risolutiva}
-Il programma deve riuscire a disegnare figure elementari su un pannello. Per farlo viene utilizzato l`oggetto graphics andando a reimplementare la classe 
-\begin{lstlisting}
-public void paintComponent(Graphics g);
-\end{lstlisting}
+Per realizzare un programma con la grafica vettoriale, cioè che ti consente di disegnare un grande numero di figure, grafico e testo, abbiamo utilizzato la java.awt per gli eventi e la java.swing per i componenti grafici.
+Data la molteplicità di funzionalità da implementare, è necessario organizzare un’appropriata gerarchia delle classi, affinché il programma sia facilmente comprensibile e facilmente estendibile.
+A tale scopo dovremmo creare una classe astratta che ci consente di definire un metodo astratto draw, che verrà poi implementata da ogni classe che avrà il compito di disegnare una particolare figura.
+Il modello di tale programma non è particolarmente complesso, in quanto andiamo a lavorare soprattutto sulla parte grafica, e non sulla parte logica.
+L’unico componente un po’ più complicato da realizzare da un punto di vista del modello è la gestione dei file.
+Come abbiamo gestito la lettura e la scrittura su file?
+Grazie a degli appropriati metodi che consentono di scrivere sul file di testo le informazioni della figura da salvare.
+All’interno del programma tali figure dovranno essere salvate in un array.
+Questo array bisogna renderlo ridimensionabile per permettere di mettere un numero potenzialmente infinito di figure al suo interno. (Il massimo numero di elementi dipende dalla dimensione della memoria della piattaforma).
+Grossomodo ogni classe che ha il compito di disegnare una figura ha in comune come attributi: il colore di rilievo e il colore di sfondo della figura.
+Questi attributi sono presenti all’interno della classe astratta padre delle figure, e vengono ereditati da tutte le classi figlie, ovvero da tutte le figure.
+Una classe che eredita tali attributi, ma di fatto non li usa, è la classe del grafico, che funziona in maniera differente.
+Per prima cosa è necessario scegliere un metodo per salvare la funzione messa in input dall’utente.
+Quindi dovremo realizzare una classe Funzione, che al suo interno memorizzi i coefficienti della funzione (array di double).
+Sarà poi necessario, per disegnare il grafico, avere un metodo che consenta, data la x, di calcolare la y.
+Per disegnare il grafico abbiamo scelto di disegnare delle linee che uniscono il punto x iniziale con il punto x successivo, fino a che non si esce dal pannello di disegno.
+Le Y del pannello di disegno non possono assumere valori negativi quindi affinché il grafico risulti corretto, è necessario sottrarre alle y  la dimensione del pannello.
+
+
+Come vengono disegnate le figure?
+Per il disegno della figura viene sempre preso in considerazione il punto superiore sinistro (viene registrato quando il mouse viene premuto, e quello inferiore destro che viene registrato quando il mouse rilasciato).
+Ci sono dei casi però dove è necessario calcolare in base ai due punti registrati, quale sia il punto superiore sinistro e il punto inferiore destro perché inizialmente viene considerato il punto superiore sinistro quello della pressione del tasto sinistro del mouse, mentre il punto inferiore destro quello al rilascio.
+Per questo verranno implementati dei metodi di Utilità che servono a calcolare la distanza tra due punti. (Distanza delle ascisse, distanza delle ordinate e distanza tra due punti).
+
+Per quanto riguarda i Font, abbiamo deciso di dare all’utente tutti i font resi disponibili dal sistema operativo, in quanto non tutte le piattaforme hanno i medesimi font.
+
+Daremo anche la possibilità di cancellare le figure presenti nel disegno, tramite una selezione mediante tabella.
+Questa tabella si aggiornerà in tempo reale, e quando un oggetto verrà eliminato, tale oggetto non verrà ridisegnato, e risulterà eliminato.
+Sebbene non è molto efficiente, a ogni nuovo disegno aggiunto, vengono ridisegnati tutti i disegni presenti nel vettore finora, più quello nuovo aggiunto.
+Altrimenti non sarebbe possibile memorizzare più di una figura, più di un testo e più di un grafico nel solito pannello.
+All’interno della tabella ci sarà un riferimento al vettore di figura della classe del Frame principale, cosicché quando un elemento viene cancellato nel frame principale, viene anche cancellato nella tabella.
+Per il colore utilizzeremo lo standard RGB, in quanto esso è di facile utilizzo e intuitivo all’interno del linguaggio Java.
+
 
 \subsection{Funzionalitá del programma}
 Le funzionalitá che si devono implementare sono:
@@ -186,8 +213,8 @@ La scomposizione Top-Down del Main é la seguente:
 \subsection{UML}
 \label{UML}
 \begin{center}
-	\includegraphics[scale=0.5]{Immagini/UML_DisegnoFigure.pdf}
-	\includegraphics[scale=0.5]{Immagini/UML_GUI_Designer.pdf}
+	\includegraphics[scale=0.4]{Immagini/UML_DisegnoFigure.pdf}\\
+	\includegraphics[scale=0.5]{Immagini/UML_GUI_Designer.pdf}\\
 	\includegraphics[scale=0.5]{Immagini/UML_Utilities.pdf}
 \end{center}
 
@@ -312,34 +339,32 @@ public static int getDistanza(Punto p1, Punto p2);
 
 \section{Test Data Set/Debug}
 I test che sono stati eseguiti sono i seguenti:
-\listoffigures
-
-\begin{figure}[1]
+\begin{figure}
   \includegraphics[scale=.5]{Immagini/Debug/test1.png}
   \caption[Disegno delle figure]{Le figure vengono disegnate correttamente anche quando la quantitá delle figure é alta, il vettore viene semplicemente ampliato}
 \end{figure}
 
-\begin{figure}[2]
+\begin{figure}
   \includegraphics[scale=.5]{Immagini/Debug/test2.png}
   \caption[Nuovo file]{Se dal menú si seleziona "Nuovo" verrá chiesta la descrizione del file}
    \includegraphics[scale=.8]{Immagini/Debug/test3.png}
   \caption[Nuovo file]{Dopo aver inserita la descrizione verrá chiesta la posizione dove il file deve essere salvato}
 \end{figure}
 
-\begin{figure}[3]
+\begin{figure}
   \includegraphics[scale=.5]{Immagini/Debug/test4.png}
   \caption[Salvataggio file]{Se dal menú si seleziona "Salva" verrá avviata la procedura di creazione del file se questo non é stato creato altrimenti, verrá visualizzato un messaggio di conferma del salvataggio}
 \end{figure}
 
-\begin{figure}[4]
+\begin{figure}
   \includegraphics[scale=.5]{Immagini/Debug/test4.png}
   \caption[Salvataggio file]{Se dal menú si seleziona "Salva" verrá avviata la procedura di creazione del file se questo non é stato creato altrimenti, verrá visualizzato un messaggio di conferma del salvataggio}
 \end{figure}
 
-\begin{figure}[4]
-  \includegraphics[scale=.5]{Immagini/Debug/test5.png}
-  \caption[Caricamento File]{Se viene caricato un file che non corrisponde a un file creato dal programma viene visualizzata un messaggio di errore}
-\end{figure}
+%\begin{figure}
+	%\includegraphics[scale=.5]{Immagini/Debug/test5.png}
+	%\caption[Caricamento File]{Se viene caricato un file che non corrisponde a un file creato dal programma viene visualizzata un messaggio di errore}
+%\end{figure}
 
 \printbibliography
 \end{document}
