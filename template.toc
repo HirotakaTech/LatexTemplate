@@ -57,3 +57,5 @@
 \contentsline {subsubsection}{\numberline {4.3.12}Utilities}{11}{subsubsection.4.3.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Test Data Set/Debug}{12}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Conclusioni personali}{16}{section.6}

@@ -1,6 +1,6 @@
-\documentclass[a4paper,12pt,times,numbered,print,index]{article}
+\documentclass[a4paper,12pt]{article}
 
-
+\usepackage[font=small,labelfont=bf]{caption}
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -190,11 +190,11 @@ Le funzionalitá che si devono implementare sono:
 	\item Disegnare figure(quadrato, arco, linea, ellisse, rettangolo, grafico, cerchio e ellisse)
 	\item Disegnare Font(grandezza, tipo,  stile)
 \end{enumerate}
+\clearpage
 
-
-L`interfaccia si presenta in questo modo:\\
+L'interfaccia si presenta in questo modo:\\
 \begin{center}
-\includegraphics[scale=0.4]{Immagini/GUI.png}
+\includegraphics[scale=0.3]{Immagini/GUI.png}
 \end{center}
 
 \section{Analisi Tecnica}
@@ -322,7 +322,7 @@ Rappresenta il pannello per il disegno, ovvero il foglio bianco su cui disegnare
 \subsubsection{JDialogArc}
 Rappresenta una \textit{Dialog} che si occupa di [rendere i dati necessari per costruire l'arco 
 \subsubsection{JDialogGrafico}
-Rappresenta una \textit{Dialog} che si occupa di prendere i dati necessari per la creazione del grafico. Permette di inserire i dati con un formato a matematico uno alla volta del tipo:\\
+Rappresenta una \textit{Dialog} che si occupa di prendere i dati necessari per la creazione del grafico. Permette di inserire i dati con un formato matematico uno alla volta del tipo:\\
 $2x^2$\\
 in questo
 \begin{lstlisting}
@@ -338,33 +338,35 @@ public static int getDistanza(Punto p1, Punto p2);
 \end{lstlisting}
 
 \section{Test Data Set/Debug}
-I test che sono stati eseguiti sono i seguenti:
-\begin{figure}
+I test che sono stati eseguiti sono i seguenti:\\
   \includegraphics[scale=.5]{Immagini/Debug/test1.png}
-  \caption[Disegno delle figure]{Le figure vengono disegnate correttamente anche quando la quantitá delle figure é alta, il vettore viene semplicemente ampliato}
-\end{figure}
+  \captionof{figure}{Le figure vengono disegnate correttamente anche quando la quantitá delle figure é alta, il vettore viene semplicemente ampliato}
+
 
 \begin{figure}
   \includegraphics[scale=.5]{Immagini/Debug/test2.png}
-  \caption[Nuovo file]{Se dal menú si seleziona "Nuovo" verrá chiesta la descrizione del file}
+  \captionof{figure}{Se dal menú si seleziona "Nuovo" verrá chiesta la descrizione del file}
    \includegraphics[scale=.8]{Immagini/Debug/test3.png}
-  \caption[Nuovo file]{Dopo aver inserita la descrizione verrá chiesta la posizione dove il file deve essere salvato}
+  \captionof{figure}{Dopo aver inserita la descrizione verrá chiesta la posizione dove il file deve essere salvato}
 \end{figure}
 
 \begin{figure}
   \includegraphics[scale=.5]{Immagini/Debug/test4.png}
-  \caption[Salvataggio file]{Se dal menú si seleziona "Salva" verrá avviata la procedura di creazione del file se questo non é stato creato altrimenti, verrá visualizzato un messaggio di conferma del salvataggio}
+  \\captionof{figure}{Se dal menú si seleziona "Salva" verrá avviata la procedura di creazione del file se questo non é stato creato altrimenti, verrá visualizzato un messaggio di conferma del salvataggio}
 \end{figure}
 
 \begin{figure}
   \includegraphics[scale=.5]{Immagini/Debug/test4.png}
-  \caption[Salvataggio file]{Se dal menú si seleziona "Salva" verrá avviata la procedura di creazione del file se questo non é stato creato altrimenti, verrá visualizzato un messaggio di conferma del salvataggio}
+  \captionof{figure}{Se dal menú si seleziona "Salva" verrá avviata la procedura di creazione del file se questo non é stato creato altrimenti, verrá visualizzato un messaggio di conferma del salvataggio}
 \end{figure}
 
 \begin{figure}
-\includegraphics[scale=.5]{Immagini/Debug/test5.png}
-\caption[Caricamento File]{Se viene caricato un file che non corrisponde a un file creato dal programma viene visualizzata un messaggio di errore}
+\includegraphics[scale=.4]{Immagini/Debug/test5.png}
+\captionof{figure}{Se viene caricato un file che non corrisponde a un file creato dal programma viene visualizzata un messaggio di errore}
 \end{figure}
-
+\clearpage
+\section{Conclusioni personali}
+Dopo aver concluso questa esercitazione, possiamo dire che abbiamo assunto una buona familiarità con le librerie awt e swing di java, oltre al fatto che abbiamo saputo gestire un progetto alquanto grande.
 \printbibliography
+
 \end{document}
