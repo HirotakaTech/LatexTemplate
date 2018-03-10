@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.28)  10 MAR 2018 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.28)  10 MAR 2018 18:36
 entering extended mode
 **./template.tex
 (template.tex
@@ -1196,23 +1196,47 @@ Package pdftex.def Info: Immagini/GUI.png  used on input line 170. on input lin
 e 170.
 Package pdftex.def Info: Requested size: 401.89438pt x 281.04501pt on input lin
 e 170.
-<Immagini/UML.pdf, id=172, pagebox=cropbox, 743.77875pt x 829.0975pt>
-File: Immagini/UML.pdf Graphic file (type pdf)
-<use Immagini/UML.pdf>
-Package pdftex.def Info: Immagini/UML.pdf  used on input line 188. on input lin
-e 188.
-Package pdftex.def Info: Requested size: 297.50623pt x 331.63313pt on input lin
-e 188.
-[4 <./Immagini/GUI.png>] [5 <./Immagini/UML.pdf>]
-<Immagini/menu.png, id=195, 111.41624pt x 90.3375pt>
+<Immagini/UML_DisegnoFigure.pdf, id=172, pagebox=cropbox, 783.92876pt x 1336.99
+5pt>
+File: Immagini/UML_DisegnoFigure.pdf Graphic file (type pdf)
+<use Immagini/UML_DisegnoFigure.pdf>
+Package pdftex.def Info: Immagini/UML_DisegnoFigure.pdf  used on input line 189
+. on input line 189.
+Package pdftex.def Info: Requested size: 391.96342pt x 668.49586pt on input lin
+e 189.
+<Immagini/UML_GUI_Designer.pdf, id=173, pagebox=cropbox, 713.66624pt x 873.2625
+pt>
+File: Immagini/UML_GUI_Designer.pdf Graphic file (type pdf)
+<use Immagini/UML_GUI_Designer.pdf>
+Package pdftex.def Info: Immagini/UML_GUI_Designer.pdf  used on input line 190.
+ on input line 190.
+Package pdftex.def Info: Requested size: 356.83224pt x 436.63017pt on input lin
+e 190.
+<Immagini/UML_Utilities.pdf, id=174, pagebox=cropbox, 708.6475pt x 624.3325pt>
+File: Immagini/UML_Utilities.pdf Graphic file (type pdf)
+<use Immagini/UML_Utilities.pdf>
+Package pdftex.def Info: Immagini/UML_Utilities.pdf  used on input line 191. on
+ input line 191.
+Package pdftex.def Info: Requested size: 354.32289pt x 312.16548pt on input lin
+e 191.
+[4 <./Immagini/GUI.png>] [5]
+Overfull \vbox (426.36917pt too high) has occurred while \output is active []
+
+
+[6 <./Immagini/UML_DisegnoFigure.pdf> <./Immagini/UML_GUI_Designer.pdf>]
+[7 <./Immagini/UML_Utilities.pdf>]
+<Immagini/menu.png, id=211, 111.41624pt x 90.3375pt>
 File: Immagini/menu.png Graphic file (type png)
 <use Immagini/menu.png>
-Package pdftex.def Info: Immagini/menu.png  used on input line 222. on input li
-ne 222.
+Package pdftex.def Info: Immagini/menu.png  used on input line 224. on input li
+ne 224.
 Package pdftex.def Info: Requested size: 111.41597pt x 90.33727pt on input line
- 222.
- [6 <./Immagini/menu.png>]
-[7] [8] (template.lof)
+ 224.
+
+
+LaTeX Warning: Reference `UML' on page 8 undefined on input line 230.
+
+[8 <./Immagini/menu.png>] [9] [10] (template.lof)
 \tf@lof=\write7
 \openout7 = `template.lof'.
 
@@ -1224,17 +1248,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.315 \begin{figure}[1]
+l.317 \begin{figure}[1]
                        
 Option `1' ignored and `p' used.
 
-<Immagini/Debug/test1.png, id=244, 748.29562pt x 524.71031pt>
+<Immagini/Debug/test1.png, id=263, 748.29562pt x 524.71031pt>
 File: Immagini/Debug/test1.png Graphic file (type png)
 <use Immagini/Debug/test1.png>
-Package pdftex.def Info: Immagini/Debug/test1.png  used on input line 316. on i
-nput line 316.
+Package pdftex.def Info: Immagini/Debug/test1.png  used on input line 318. on i
+nput line 318.
 Package pdftex.def Info: Requested size: 374.1469pt x 262.3545pt on input line 
-316.
+318.
 
 ! LaTeX Error: Unknown float option `2'.
 
@@ -1242,24 +1266,24 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.320 \begin{figure}[2]
+l.322 \begin{figure}[2]
                        
 Option `2' ignored and `p' used.
 
-<Immagini/Debug/test2.png, id=246, 746.79pt x 522.45187pt>
+<Immagini/Debug/test2.png, id=265, 746.79pt x 522.45187pt>
 File: Immagini/Debug/test2.png Graphic file (type png)
 <use Immagini/Debug/test2.png>
-Package pdftex.def Info: Immagini/Debug/test2.png  used on input line 321. on i
-nput line 321.
+Package pdftex.def Info: Immagini/Debug/test2.png  used on input line 323. on i
+nput line 323.
 Package pdftex.def Info: Requested size: 373.39407pt x 261.2253pt on input line
- 321.
-<Immagini/Debug/test3.png, id=247, 389.95688pt x 354.57469pt>
+ 323.
+<Immagini/Debug/test3.png, id=266, 389.95688pt x 354.57469pt>
 File: Immagini/Debug/test3.png Graphic file (type png)
 <use Immagini/Debug/test3.png>
-Package pdftex.def Info: Immagini/Debug/test3.png  used on input line 323. on i
-nput line 323.
+Package pdftex.def Info: Immagini/Debug/test3.png  used on input line 325. on i
+nput line 325.
 Package pdftex.def Info: Requested size: 311.96591pt x 283.66013pt on input lin
-e 323.
+e 325.
 
 ! LaTeX Error: Unknown float option `3'.
 
@@ -1267,17 +1291,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.327 \begin{figure}[3]
+l.329 \begin{figure}[3]
                        
 Option `3' ignored and `p' used.
 
-<Immagini/Debug/test4.png, id=248, 747.54282pt x 523.9575pt>
+<Immagini/Debug/test4.png, id=267, 747.54282pt x 523.9575pt>
 File: Immagini/Debug/test4.png Graphic file (type png)
 <use Immagini/Debug/test4.png>
-Package pdftex.def Info: Immagini/Debug/test4.png  used on input line 328. on i
-nput line 328.
+Package pdftex.def Info: Immagini/Debug/test4.png  used on input line 330. on i
+nput line 330.
 Package pdftex.def Info: Requested size: 373.7705pt x 261.9781pt on input line 
-328.
+330.
 
 ! LaTeX Error: Unknown float option `4'.
 
@@ -1285,16 +1309,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.332 \begin{figure}[4]
+l.334 \begin{figure}[4]
                        
 Option `4' ignored and `p' used.
 
 File: Immagini/Debug/test4.png Graphic file (type png)
 <use Immagini/Debug/test4.png>
-Package pdftex.def Info: Immagini/Debug/test4.png  used on input line 333. on i
-nput line 333.
+Package pdftex.def Info: Immagini/Debug/test4.png  used on input line 335. on i
+nput line 335.
 Package pdftex.def Info: Requested size: 373.7705pt x 261.9781pt on input line 
-333.
+335.
 
 ! LaTeX Error: Unknown float option `4'.
 
@@ -1302,12 +1326,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.337 \begin{figure}[4]
+l.339 \begin{figure}[4]
                        
 Option `4' ignored and `p' used.
 
 
-LaTeX Warning: File `Immagini/Debug/test5.png' not found on input line 338.
+LaTeX Warning: File `Immagini/Debug/test5.png' not found on input line 340.
 
 
 ! Package pdftex.def Error: File `Immagini/Debug/test5.png' not found: using dr
@@ -1317,7 +1341,7 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.338 ...phics[scale=.5]{Immagini/Debug/test5.png}
+l.340 ...phics[scale=.5]{Immagini/Debug/test5.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1326,8 +1350,8 @@ If that doesn't work, type  X <return>  to quit.
 LaTeX Warning: Empty bibliography on input line 344.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-[9] [10 <./Immagini/Debug/test1.png>] [11 <./Immagini/Debug/test2.png> <./Immag
-ini/Debug/test3.png>] [12 <./Immagini/Debug/test4.png>] [13]
+[11] [12 <./Immagini/Debug/test1.png>] [13 <./Immagini/Debug/test2.png> <./Imma
+gini/Debug/test3.png>] [14 <./Immagini/Debug/test4.png>] [15]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
  (template.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
@@ -1339,6 +1363,9 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 LaTeX Warning: There were undefined references.
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                template
 (biblatex)                and rerun LaTeX afterwards.
@@ -1348,10 +1375,10 @@ Package logreq Info: Writing requests to 'template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15001 strings out of 493312
- 243842 string characters out of 3128087
- 675016 words of memory out of 3000000
- 18289 multiletter control sequences out of 15000+200000
+ 15013 strings out of 493312
+ 244269 string characters out of 3128087
+ 677983 words of memory out of 3000000
+ 18297 multiletter control sequences out of 15000+200000
  9890 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,11n,43p,802b,1219s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1368,9 +1395,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Users/Guglielmo/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Use
 rs/Guglielmo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mtt12.pfb>
-Output written on template.pdf (15 pages, 699175 bytes).
+Output written on template.pdf (17 pages, 1337992 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
