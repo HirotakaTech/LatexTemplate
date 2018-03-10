@@ -1,15 +1,15 @@
-[0] Config.pm:302> INFO - This is Biber 2.10
-[0] Config.pm:305> INFO - Logfile is 'template.blg'
-[17] biber:313> INFO - === sab feb 10, 2018, 16:58:24
-[31] Biber.pm:371> INFO - Reading 'template.bcf'
-[78] Biber.pm:857> INFO - Found 2 citekeys in bib section 0
-[88] Biber.pm:3976> INFO - Processing section 0
-[96] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[97] bibtex.pm:1490> INFO - LaTeX decoding ...
-[100] bibtex.pm:1306> INFO - Found BibTeX data source 'bibliografia.bib'
-[114] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[115] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[115] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'it-IT'
-[115] Biber.pm:3810> INFO - No sort tailoring available for locale 'it-IT'
-[117] bbl.pm:617> INFO - Writing 'template.bbl' with encoding 'UTF-8'
-[118] bbl.pm:720> INFO - Output to template.bbl
+[0] Config.pm:340> INFO - This is Biber 2.4
+[0] Config.pm:343> INFO - Logfile is 'template.blg'
+[101] biber:287> INFO - === sab mar 10, 2018, 10:05:54
+[222] Biber.pm:348> INFO - Reading 'template.bcf'
+[413] Biber.pm:742> INFO - Found 3 citekeys in bib section 0
+[420] Biber.pm:3151> INFO - Processing section 0
+[462] Biber.pm:3308> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[467] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[473] bibtex.pm:974> INFO - Found BibTeX data source 'bibliografia.bib'
+[558] UCollate.pm:65> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[558] UCollate.pm:65> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[558] Biber.pm:3028> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'it-IT'
+[558] Biber.pm:3032> INFO - No sort tailoring available for locale 'it-IT'
+[564] bbl.pm:519> INFO - Writing 'template.bbl' with encoding 'UTF-8'
+[577] bbl.pm:615> INFO - Output to template.bbl

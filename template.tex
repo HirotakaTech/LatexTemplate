@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt,times,numbered,print,index]{article}
 
+
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -131,6 +132,19 @@ Il metodo polimorfico in questo caso deve:
 \end{itemize}
 \textcite{polimorfismo}
 
+\subsection{Classi Astratte}
+Le classi astratte sono direttamente connesse con il concetto di ereditarietá. Infatti queste sono classi che sono create appositamente all'unico scopo di essere estese, quindi servono per avere caratteristiche comuni alle classi che la esendono, logicamente non possono neanche essere istanziate.
+
+Per dichiarare una classe astratta si puó ricorrere alla parola chiave \textit{abstract} accanto al nome della classe, oppure se si dichiara dei metodi astratti, la classe diventa automaticamente astratta.
+\textcite{astratta}
+
+\subsection{Swing e AWT}
+L'AWT é una libreria grafica che permette di creare componenti grafici per i programmi Java, é stato sostituito dalla Swing per il fatto che utilizzava un primitive del sistema operativo su cui il programma girava. Questo non rispettava il motto di Java ("write once, run everywhere") perché, usando le primitive di sistema, il programma risultava avere un aspetto diverso a seconda della piattaforma su girava.
+
+La Swing é un'estensione dell'AWT con componenti scritti interamente in Java, i programmi hanno cosí uguale aspetto su ogni piattaforma. Nonostante l'avvento della Swing, l'AWT viene utilizzata per la gestione degli eventi e per altre classi come la \textit{Dimension}.
+
+\subsection{Disegno in Java}
+Per il disegno di figure geometriche in Java inizialmente veniva utilizzata la classe Canvas, questa peró é stata dichiarata deprecata. Adesso, anche con l'avvento del framework Swing, viene utilizzato un metodo chiamato \textit{paintComponent(Graphics g)} a cui viene fatto l'overriding nella classe in cui si vuole disegnare, questo metodo é comune a tutti i JComponent. Per il disegno vero e proprio, il componente \textit{Graphics g} contiene dei metodi appositi come il \textit{DrawLine(...)} per disegnare una linea. 
 
 \section{Analisi Funzionale}
 
@@ -151,8 +165,10 @@ Le funzionalitá che si devono implementare sono:
 \end{enumerate}
 
 
-L`interfaccia si presenta in questo modo:
-
+L`interfaccia si presenta in questo modo:\\
+\begin{center}
+\includegraphics[scale=0.4]{Immagini/GUI.png}
+\end{center}
 
 \section{Analisi Tecnica}
 
@@ -186,10 +202,14 @@ Le classi del programma Designer sono divise per package a seconda del loro util
 	\item \textit{lookAndFeel}: contiene i .jar del Look And Feel utilizzato.
 \end{itemize}
 Di seguito verranno descritte solo le classi principali.
-\subsubsection{MainFrame} %Nome della classe
-La classe \textit{MainFrame} è la classe che si occupa di gestire tutti gli oggetti del programma, infatti rappresenta il \textit{controller} e la \textit{vista} del Design Pattern MVC. Le sue funzioni principali sono state esplicitate in \ref{TopDown}. La classe è stata scomposta in molti sottometodi per facilitare la lettura e la scrittura. Viene implementato il MouseListener registrato sul \textit{pnlDisegno} e nel momento in cui l'utente preme sul pannello viene registrata la posizione (iniziale) del mouse poi, al rilascio, viene registrata la posizione (finale) del mouse inizializzando e inserendo nel vettoreFigure la figure precedentemente selezionata dall'utente.
 
-\textit{setSelectedBotton()} è un particolare metodo per riuscire a lasciare selezionati i pulsanti delle figure e dello stile dei font, semplicemente deseleziona tutti i pulsanti che non corrispondono a quello premuto.
+\subsubsection{MainFrame} %Nome della classe
+La classe \textit{MainFrame} è la classe che si occupa di gestire tutti gli oggetti del programma, infatti rappresenta il \textit{controller} e la \textit{vista} del Design Pattern MVC. Le sue funzioni principali sono state esplicitate in \ref{TopDown}. La classe è stata scomposta in molti sottometodi per facilitare la lettura e la scrittura. Viene implementato il MouseListener registrato sul \textit{pnlDisegno} e nel momento in cui l'utente preme sul pannello viene registrata la posizione (iniziale) del mouse poi, al rilascio, viene registrata la posizione (finale) del mouse inizializzando e inserendo nel vettoreFigure la figura precedentemente selezionata dall'utente.
+
+Per il Font abbiamo utlizzato tre pulsanti nel pannello di destra insieme a una \textit{JComboBox} con la lista dei font di sistema e una \textit{JTextField} per inserire la parola/frase da disegnare.
+
+Per il disegno dell'arco e del grafico ci siamo serviti di due Dialog che permettono di ottenere i dati necessari al disegno dei due elementi.
+
 
 Al rilascio del pulsante del mouse vengono fatti vari controlli delle coordinate per farsì che la figura sia disegnata correttamente: se per esempio l'utente trascina da in alto a sinistra fino in basso a sinistra dovranno essere scambiate le coordinate come segue
 \begin{lstlisting}
@@ -198,7 +218,10 @@ Al rilascio del pulsante del mouse vengono fatti vari controlli delle coordinate
   pIniziale.setLocation(pSup);
   pFinale.setLocation(pInf);
 \end{lstlisting}
-Al suo interno è presente una inner class, che ha come scopo quello di gestire il \textit{JMenuBar} e di gestire la creazione di un file, il caricamento e il salvataggio.
+Al suo interno è presente una inner class, che rappresenta una \textit{JMenuBar} e di gestire la creazione di un file, il caricamento e il salvataggio. Il menú si presenta in questo modo:
+\includegraphics{Immagini/menu.png}
+
+\textit{setSelectedBotton()} è un particolare metodo per riuscire a lasciare selezionati i pulsanti delle figure e dello stile dei font, semplicemente deseleziona tutti i pulsanti che non corrispondono a quello premuto.
 
 \subsubsection{DrawSomething}
 La classe \textit{DrawSomething} é una classe astratta che dichiara alcuni metodi per impostare i colori e un metodo astratto per essere riscritto nelle classi figlie.
@@ -275,6 +298,14 @@ $2x^2$\\
 in questo
 \begin{lstlisting}
 2x2
+\end{lstlisting}
+
+\subsubsection{Utilities}
+É la classe che contiene metodi statici per il calcolo delle distanze tra due punti, i metodi sono i seguenti:
+\begin{lstlisting}
+public static int getDistanzaX(Punto p1, Punto p2);
+public static int getDistanzaY(Punto p1, Punto p2);
+public static int getDistanza(Punto p1, Punto p2);
 \end{lstlisting}
 
 \section{Test Data Set/Debug}
