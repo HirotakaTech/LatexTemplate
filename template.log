@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.12.6)  10 MAR 2018 23:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.12.6)  10 MAR 2018 23:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,7 +950,7 @@ Package biblatex Info: ... file 'template.bbl' found.
  (./template.bbl)
 Package biblatex Info: Reference section=0 on input line 66.
 Package biblatex Info: Reference segment=0 on input line 66.
-<logoITTS.jpg, id=112, 504.88625pt x 100.375pt>
+<logoITTS.jpg, id=116, 504.88625pt x 100.375pt>
 File: logoITTS.jpg Graphic file (type jpg)
 <use logoITTS.jpg>
 Package pdftex.def Info: logoITTS.jpg  used on input line 75. on input line 75.
@@ -999,14 +999,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-<Immagini/GUI.png, id=178, 1001.7425pt x 679.53876pt>
+<Immagini/GUI.png, id=183, 1001.7425pt x 679.53876pt>
 File: Immagini/GUI.png Graphic file (type png)
 <use Immagini/GUI.png>
 Package pdftex.def Info: Immagini/GUI.png  used on input line 197. on input lin
 e 197.
 Package pdftex.def Info: Requested size: 300.52507pt x 203.8632pt on input line
  197.
-<Immagini/UML_DisegnoFigure.pdf, id=179, pagebox=cropbox, 783.92876pt x 1336.99
+<Immagini/UML_DisegnoFigure.pdf, id=184, pagebox=cropbox, 783.92876pt x 1336.99
 5pt>
 File: Immagini/UML_DisegnoFigure.pdf Graphic file (type pdf)
 <use Immagini/UML_DisegnoFigure.pdf>
@@ -1017,7 +1017,7 @@ e 216.
 [5
 
  <./Immagini/GUI.png>]
-<Immagini/UML_GUI_Designer.pdf, id=193, pagebox=cropbox, 713.66624pt x 873.2625
+<Immagini/UML_GUI_Designer.pdf, id=198, pagebox=cropbox, 713.66624pt x 873.2625
 pt>
 File: Immagini/UML_GUI_Designer.pdf Graphic file (type pdf)
 <use Immagini/UML_GUI_Designer.pdf>
@@ -1026,7 +1026,7 @@ Package pdftex.def Info: Immagini/UML_GUI_Designer.pdf  used on input line 217.
 Package pdftex.def Info: Requested size: 356.83224pt x 436.63017pt on input lin
 e 217.
  [6 <./Immagini/UML_DisegnoFigure.pdf>]
-<Immagini/UML_Utilities.pdf, id=202, pagebox=cropbox, 708.6475pt x 624.3325pt>
+<Immagini/UML_Utilities.pdf, id=207, pagebox=cropbox, 708.6475pt x 624.3325pt>
 File: Immagini/UML_Utilities.pdf Graphic file (type pdf)
 <use Immagini/UML_Utilities.pdf>
 Package pdftex.def Info: Immagini/UML_Utilities.pdf  used on input line 218. on
@@ -1034,7 +1034,7 @@ Package pdftex.def Info: Immagini/UML_Utilities.pdf  used on input line 218. on
 Package pdftex.def Info: Requested size: 354.32289pt x 312.16548pt on input lin
 e 218.
  [7 <./Immagini/UML_GUI_Designer.pdf>] [8 <./Immagini/UML_Utilities.pdf>]
-<Immagini/menu.png, id=218, 111.41624pt x 90.3375pt>
+<Immagini/menu.png, id=223, 111.41624pt x 90.3375pt>
 File: Immagini/menu.png Graphic file (type png)
 <use Immagini/menu.png>
 Package pdftex.def Info: Immagini/menu.png  used on input line 251. on input li
@@ -1042,7 +1042,7 @@ ne 251.
 Package pdftex.def Info: Requested size: 111.41597pt x 90.33727pt on input line
  251.
  [9 <./Immagini/menu.png>] [10]
-<Immagini/Debug/test1.png, id=252, 748.29562pt x 524.71031pt>
+<Immagini/Debug/test1.png, id=257, 748.29562pt x 524.71031pt>
 File: Immagini/Debug/test1.png Graphic file (type png)
 <use Immagini/Debug/test1.png>
 Package pdftex.def Info: Immagini/Debug/test1.png  used on input line 342. on i
@@ -1061,21 +1061,21 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [11]
-<Immagini/Debug/test2.png, id=268, 746.79pt x 522.45187pt>
+<Immagini/Debug/test2.png, id=273, 746.79pt x 522.45187pt>
 File: Immagini/Debug/test2.png Graphic file (type png)
 <use Immagini/Debug/test2.png>
 Package pdftex.def Info: Immagini/Debug/test2.png  used on input line 347. on i
 nput line 347.
 Package pdftex.def Info: Requested size: 373.39407pt x 261.2253pt on input line
  347.
-<Immagini/Debug/test3.png, id=269, 389.95688pt x 354.57469pt>
+<Immagini/Debug/test3.png, id=274, 389.95688pt x 354.57469pt>
 File: Immagini/Debug/test3.png Graphic file (type png)
 <use Immagini/Debug/test3.png>
 Package pdftex.def Info: Immagini/Debug/test3.png  used on input line 349. on i
 nput line 349.
 Package pdftex.def Info: Requested size: 311.96591pt x 283.66013pt on input lin
 e 349.
-<Immagini/Debug/test4.png, id=270, 747.54282pt x 523.9575pt>
+<Immagini/Debug/test4.png, id=275, 747.54282pt x 523.9575pt>
 File: Immagini/Debug/test4.png Graphic file (type png)
 <use Immagini/Debug/test4.png>
 Package pdftex.def Info: Immagini/Debug/test4.png  used on input line 354. on i
@@ -1088,7 +1088,7 @@ Package pdftex.def Info: Immagini/Debug/test4.png  used on input line 359. on i
 nput line 359.
 Package pdftex.def Info: Requested size: 373.7705pt x 261.9781pt on input line 
 359.
-<Immagini/Debug/test5.png, id=271, 1003.75pt x 702.625pt>
+<Immagini/Debug/test5.png, id=276, 1003.75pt x 702.625pt>
 File: Immagini/Debug/test5.png Graphic file (type png)
 <use Immagini/Debug/test5.png>
 Package pdftex.def Info: Immagini/Debug/test5.png  used on input line 364. on i
@@ -1106,24 +1106,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
  (./template.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 372.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
-
-
-Package rerunfilecheck Warning: File `template.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `template.out':
-(rerunfilecheck)             Before: 6F49BAA9655C07BC52B96015D09571C6;1769
-(rerunfilecheck)             After:  4E645F2DD282F6D914760A40E4737F15;1826.
+Package rerunfilecheck Info: File `template.out' has not changed.
+(rerunfilecheck)             Checksum: 4E645F2DD282F6D914760A40E4737F15;1826.
 Package logreq Info: Writing requests to 'template.run.xml'.
 \openout1 = `template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16019 strings out of 492985
- 257907 string characters out of 6138638
+ 16020 strings out of 492985
+ 257918 string characters out of 6138638
  690700 words of memory out of 5000000
- 19319 multiletter control sequences out of 15000+600000
+ 19320 multiletter control sequences out of 15000+600000
  10198 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,48p,800b,1348s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1137,10 +1130,10 @@ share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
 ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on template.pdf (17 pages, 1375139 bytes).
+Output written on template.pdf (17 pages, 1375315 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
+ 377 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
  98 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
 
